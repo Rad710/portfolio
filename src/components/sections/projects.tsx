@@ -37,11 +37,24 @@ function ProjectLinks({ project }: { project: ProjectItem }) {
     );
 }
 
-function Block({ label, children }: { label: string; children: string }) {
+/** A screenshot in minimal browser chrome, with the live URL in the bar. */
+function BrowserFrame({ src, url, alt }: { src: string; url?: string; alt: string }) {
     return (
-        <div>
-            <p className="eyebrow mb-2">{label}</p>
-            <p className="text-sm leading-relaxed text-muted">{children}</p>
+        <div className="overflow-hidden rounded-xl border border-border bg-surface">
+            <div className="flex items-center gap-2 border-b border-border px-3 py-2">
+                <span className="flex gap-1.5" aria-hidden>
+                    <span className="size-2.5 rounded-full bg-border" />
+                    <span className="size-2.5 rounded-full bg-border" />
+                    <span className="size-2.5 rounded-full bg-border" />
+                </span>
+                {url ? (
+                    <span className="ml-1 truncate font-mono text-[0.65rem] text-faint">
+                        {url.replace(/^https?:\/\//, "")}
+                    </span>
+                ) : null}
+            </div>
+            {/* biome-ignore lint/performance/noImgElement: static, self-hosted screenshot; next/image optimizer not needed in the standalone container */}
+            <img src={src} alt={alt} loading="lazy" className="block w-full" />
         </div>
     );
 }
@@ -50,6 +63,12 @@ function FeaturedCard({ project }: { project: ProjectItem }) {
     const { t } = useTranslation();
     return (
         <article className="rounded-2xl border border-border bg-surface/40 p-6 transition-colors hover:border-accent/40 sm:p-8">
+            {project.image ? (
+                <div className="mb-8">
+                    <BrowserFrame src={project.image} url={project.live} alt={project.name} />
+                </div>
+            ) : null}
+
             <div className="flex flex-wrap items-start justify-between gap-4">
                 <div>
                     <p className="mb-2 font-mono text-[0.7rem] uppercase tracking-[0.18em] text-faint">
@@ -65,12 +84,9 @@ function FeaturedCard({ project }: { project: ProjectItem }) {
             <p className="mt-4 max-w-2xl text-lg leading-relaxed text-foreground/90">
                 {project.tagline}
             </p>
-
-            <div className="mt-8 grid gap-6 border-t border-border pt-8 md:grid-cols-3">
-                <Block label={t("projects.problemLabel")}>{project.problem}</Block>
-                <Block label={t("projects.approachLabel")}>{project.approach}</Block>
-                <Block label={t("projects.outcomeLabel")}>{project.outcome}</Block>
-            </div>
+            {project.description ? (
+                <p className="mt-4 max-w-2xl leading-relaxed text-muted">{project.description}</p>
+            ) : null}
 
             <TechTags items={project.tech} className="mt-8" />
         </article>

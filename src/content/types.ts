@@ -14,13 +14,12 @@ export type ProjectItem = {
     id: string;
     name: string;
     tagline: string;
-    problem: string;
-    approach: string;
-    outcome: string;
+    description?: string;
     tech: string[];
     live?: string;
     code?: string;
     featured: boolean;
+    image?: string;
 };
 
 export type SkillGroup = {

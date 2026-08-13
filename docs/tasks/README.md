@@ -31,6 +31,7 @@ checklist, mark it `done`, then pick the next. The numbered list is the agreed b
 | 0010 | Polish — SEO metadata, OpenGraph image, favicon, sitemap/robots, a11y + Lighthouse pass | done | 0005–0009 |
 | [0011](0011-biome-organization/) | Biome tooling + code organization — 4-space format, lint, components split into layout/ui/sections | done | 0010 |
 | 0012 | Deploy — `node.Dockerfile` (standalone) matching the HIS convention + README + run instructions | done | 0011 |
+| [0013](0013-project-thumbnails-metrics/) | Project thumbnails (live-app screenshots) + drop vanity metrics for confident screenshot-led cards | done | 0007 |
 
 See [`../ai-workflow.md`](../ai-workflow.md) for how this repo is built, and
 [`../decisions/`](../decisions/README.md) for the immutable decision log.

@@ -89,21 +89,14 @@ export const resources = {
                 liveLabel: "Live",
                 codeLabel: "Code",
                 featuredLabel: "Featured",
-                problemLabel: "The problem",
-                approachLabel: "The approach",
-                outcomeLabel: "The outcome",
                 items: [
                     {
                         id: "text-to-sql-rag",
                         name: "Text-to-SQL RAG",
                         tagline:
-                            "A self-hostable assistant that answers questions in plain language by writing safe, read-only SQL.",
-                        problem:
-                            "Letting a language model write SQL over a real database is powerful but dangerous — one wrong query can leak or destroy data. I wanted a system that turns natural-language questions into trustworthy answers with the safety guaranteed in code, not by hoping the model behaves.",
-                        approach:
-                            "An agentic loop that retrieves the relevant schema, drafts a SELECT, runs it read-only, reads any error, and self-corrects. Safety is defense-in-depth: a SELECT-only database user, AST-level SQL validation (sqlglot) that rejects any write or dangerous function, an enforced LIMIT, and connection hardening. Results stream over SSE as structured rows the UI rebuilds into a table and chart.",
-                        outcome:
-                            "Runs for a reviewer with zero setup — a deterministic mock model and an offline embedder mean no API key or GPU needed. Backed by strict typing, an 80% test-coverage floor, full Playwright end-to-end tests, and a committed decision log. The same safe query layer is also exposed as an MCP server.",
+                            "Ask a question in plain English and get an answer from the database — as safe, read-only SQL.",
+                        description:
+                            "It finds the relevant tables, writes a SELECT, runs it, and shows the result as a table or chart. Every query is validated before it runs, so the model can read the database but never change it. Runs fully self-hosted.",
                         tech: [
                             "FastAPI",
                             "Python",
@@ -119,18 +112,15 @@ export const resources = {
                         live: "https://dyr-ai.rad710.com/login",
                         code: "https://github.com/Rad710/text-to-sql-rag",
                         featured: true,
+                        image: "/projects/text-to-sql-rag.png",
                     },
                     {
                         id: "dyr-transportes",
                         name: "D y R Transportes",
                         tagline:
-                            "A logistics platform in daily production use by a grain-transport company for trips, cargo, and driver payments.",
-                        problem:
-                            "A family grain-hauling company tracked every driver trip, cargo load, and payment on spreadsheets — slow, error-prone, and impossible to report on for the national transport regulator.",
-                        approach:
-                            "A full-stack app: a React + TypeScript + Vite frontend on Material UI (with the X Data Grid and Charts), and a Flask backend on a modern typed SQLAlchemy ORM over MySQL. It handles JWT auth, payroll generation, Excel exports, DINATRAN regulatory reporting, audit trails, and live database backups — all bilingual (EN/ES).",
-                        outcome:
-                            "In daily production use. Self-hosted end-to-end with a solo-built Jenkins pipeline: lint and SonarQube gates, automatic version tagging, multi-architecture Docker builds, GitHub releases, and remote deployment over SSH.",
+                            "The logistics platform a grain-transport company runs its day-to-day on — trips, cargo, and driver payments.",
+                        description:
+                            "It logs trips, generates driver payrolls, and exports the reports the national transport regulator requires. I built the whole stack — the React front end, the Flask/MySQL API — and the self-hosted CI/CD pipeline that ships it.",
                         tech: [
                             "React 19",
                             "TypeScript",
@@ -145,18 +135,13 @@ export const resources = {
                         live: "https://rad710.pythonanywhere.com/",
                         code: "https://github.com/Rad710/dyrtransportes_react",
                         featured: true,
+                        image: "/projects/dyr-transportes.png",
                     },
                     {
                         id: "sentiment-analysis",
                         name: "Sentiment Analysis on Financial News",
                         tagline:
-                            "Final degree project — recognised by faculty as an outstanding project of the 2024 cohort.",
-                        problem:
-                            "Does the tone of financial news actually track stock-price movement, and which NLP method captures it best?",
-                        approach:
-                            "Collected an original financial-news dataset and compared machine-learning methods — pyABSA and finBERT — for classifying article tone against subsequent price movement.",
-                        outcome:
-                            "Recognised by faculty as an outstanding project of the 2024 cohort.",
+                            "Final-year research comparing NLP methods (pyABSA, finBERT) for classifying financial-news tone against stock-price movement — recognised by faculty as an outstanding project of the 2024 cohort.",
                         tech: ["PyTorch", "finBERT", "pyABSA", "pandas", "scikit-learn"],
                         featured: false,
                     },
@@ -327,21 +312,14 @@ export const resources = {
                 liveLabel: "En vivo",
                 codeLabel: "Código",
                 featuredLabel: "Destacado",
-                problemLabel: "El problema",
-                approachLabel: "El enfoque",
-                outcomeLabel: "El resultado",
                 items: [
                     {
                         id: "text-to-sql-rag",
                         name: "Text-to-SQL RAG",
                         tagline:
-                            "Un asistente autoalojable que responde preguntas en lenguaje natural escribiendo SQL seguro y de solo lectura.",
-                        problem:
-                            "Dejar que un modelo de lenguaje escriba SQL sobre una base de datos real es potente pero peligroso — una consulta mal formada puede filtrar o destruir datos. Quería un sistema que convierta preguntas en lenguaje natural en respuestas confiables, con la seguridad garantizada en el código y no confiando en que el modelo se porte bien.",
-                        approach:
-                            "Un bucle agéntico que recupera el esquema relevante, redacta un SELECT, lo ejecuta en solo lectura, lee cualquier error y se autocorrige. La seguridad es en profundidad: un usuario de base de datos solo-SELECT, validación de SQL a nivel de AST (sqlglot) que rechaza cualquier escritura o función peligrosa, un LIMIT forzado y endurecimiento de la conexión. Los resultados se transmiten por SSE como filas estructuradas que la interfaz reconstruye en tabla y gráfico.",
-                        outcome:
-                            "Corre para quien lo revise sin ninguna configuración — un modelo mock determinista y un embedder offline evitan necesitar clave de API o GPU. Respaldado por tipado estricto, un piso de 80% de cobertura de tests, pruebas end-to-end completas con Playwright y un registro de decisiones versionado. La misma capa de consultas seguras se expone además como servidor MCP.",
+                            "Preguntá en lenguaje natural y obtené una respuesta de la base de datos — como SQL seguro y de solo lectura.",
+                        description:
+                            "Encuentra las tablas relevantes, escribe un SELECT, lo ejecuta y muestra el resultado como tabla o gráfico. Cada consulta se valida antes de ejecutarse, así el modelo puede leer la base de datos pero nunca modificarla. Corre totalmente autoalojado.",
                         tech: [
                             "FastAPI",
                             "Python",
@@ -357,18 +335,15 @@ export const resources = {
                         live: "https://dyr-ai.rad710.com/login",
                         code: "https://github.com/Rad710/text-to-sql-rag",
                         featured: true,
+                        image: "/projects/text-to-sql-rag.png",
                     },
                     {
                         id: "dyr-transportes",
                         name: "D y R Transportes",
                         tagline:
-                            "Una plataforma logística en uso diario en producción por una empresa de transporte de granos para viajes, carga y pagos a choferes.",
-                        problem:
-                            "Una empresa familiar de transporte de granos registraba cada viaje, carga y pago en planillas — lento, propenso a errores e imposible de reportar al ente regulador nacional de transporte.",
-                        approach:
-                            "Una app full-stack: un frontend en React + TypeScript + Vite sobre Material UI (con el X Data Grid y Charts), y un backend en Flask sobre un ORM moderno y tipado de SQLAlchemy sobre MySQL. Maneja autenticación JWT, generación de planillas de pago, exportación a Excel, reportes regulatorios para DINATRAN, trazas de auditoría y respaldos en vivo de la base de datos — todo bilingüe (EN/ES).",
-                        outcome:
-                            "En uso diario en producción. Autoalojado de punta a punta con un pipeline de Jenkins hecho en solitario: gates de lint y SonarQube, etiquetado automático de versiones, builds de Docker multiarquitectura, releases en GitHub y despliegue remoto por SSH.",
+                            "La plataforma logística sobre la que una empresa de transporte de granos gestiona su día a día — viajes, carga y pagos a choferes.",
+                        description:
+                            "Registra viajes, genera las liquidaciones de los choferes y exporta los reportes que exige el ente regulador nacional de transporte. Construí todo el stack — el front-end en React, la API en Flask/MySQL — y el pipeline de CI/CD autoalojado que lo despliega.",
                         tech: [
                             "React 19",
                             "TypeScript",
@@ -383,18 +358,13 @@ export const resources = {
                         live: "https://rad710.pythonanywhere.com/",
                         code: "https://github.com/Rad710/dyrtransportes_react",
                         featured: true,
+                        image: "/projects/dyr-transportes.png",
                     },
                     {
                         id: "sentiment-analysis",
                         name: "Análisis de Sentimiento en Noticias Financieras",
                         tagline:
-                            "Proyecto final de carrera — reconocido por la facultad como un proyecto destacado de la promoción 2024.",
-                        problem:
-                            "¿El tono de las noticias financieras realmente sigue el movimiento del precio de las acciones, y qué método de NLP lo captura mejor?",
-                        approach:
-                            "Recolecté un dataset original de noticias financieras y comparé métodos de machine learning — pyABSA y finBERT — para clasificar el tono de los artículos contra el movimiento posterior del precio.",
-                        outcome:
-                            "Reconocido por la facultad como un proyecto destacado de la promoción 2024.",
+                            "Investigación de fin de carrera comparando métodos de NLP (pyABSA, finBERT) para clasificar el tono de noticias financieras frente al movimiento del precio de las acciones — reconocido por la facultad como un proyecto destacado de la promoción 2024.",
                         tech: ["PyTorch", "finBERT", "pyABSA", "pandas", "scikit-learn"],
                         featured: false,
                     },

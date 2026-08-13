@@ -26,8 +26,8 @@ checklist, mark it `done`, then pick the next. The numbered list is the agreed b
 | 0005 | Hero + About sections | done | 0004 |
 | 0006 | Experience section — Taiwan ICDF (HIS) + ROSHKA, quantified bullets | done | 0004 |
 | 0007 | Projects / case studies — DyR Transportes + text-to-sql-rag (problem → approach → stack → outcome, live links) | done | 0004 |
-| 0008 | Skills + Contact sections | proposed | 0004 |
-| 0009 | CV — bilingual HTML source → ATS-friendly PDF (EN + ES), in-page download, fix shadcn→MUI inaccuracy | proposed | 0003 |
+| 0008 | Skills + Contact sections | done | 0004 |
+| 0009 | CV — bilingual HTML source → ATS-friendly PDF (EN + ES), in-page download, fix shadcn→MUI inaccuracy | done | 0003 |
 | 0010 | Polish — SEO metadata, OpenGraph image, favicon, sitemap/robots, a11y + Lighthouse pass | proposed | 0005–0009 |
 | 0011 | Deploy — `node.Dockerfile` (standalone) matching the HIS convention + README + run instructions | proposed | 0010 |
 

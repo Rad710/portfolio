@@ -20,8 +20,8 @@ checklist, mark it `done`, then pick the next. The numbered list is the agreed b
 | # | Task | Status | Depends on |
 |---|------|--------|-----------|
 | [0001](0001-scaffold-design-system/) | Project scaffold + design system — Next.js 16 / React 19 / Tailwind v4 / Motion / React Compiler, tokens, fonts, standalone output, docs workflow | done | — |
-| 0002 | Theme + language providers — dark-first `.dark` toggle and EN/ES toggle, both no-flash, wired into nav | proposed | 0001 |
-| 0003 | Bilingual content model — one typed source of truth for hero/about/experience/projects/skills/contact (EN + ES) | proposed | 0001 |
+| 0002 | Theme + language providers — dark-first `.dark` toggle and EN/ES toggle, both no-flash, wired into nav | done | 0001 |
+| 0003 | Bilingual content model — one typed source of truth for hero/about/experience/projects/skills/contact (EN + ES) | done | 0001 |
 | 0004 | Layout shell — sticky nav, footer, reusable animated `Section` primitive (respects reduced-motion) | proposed | 0002, 0003 |
 | 0005 | Hero + About sections | proposed | 0004 |
 | 0006 | Experience section — Taiwan ICDF (HIS) + ROSHKA, quantified bullets | proposed | 0004 |

@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Fraunces } from "next/font/google";
 import "./globals.css";
+import { themeNoFlashScript } from "@/lib/theme";
+import { AppInit } from "@/components/app-init";
+import { I18nProvider } from "@/lib/i18n";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,11 +32,21 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      // dark-first; the theme provider (task 0002) will manage this class.
+      // dark-first default for SSR / no-JS; the no-flash script + ThemeProvider
+      // manage this class after that.
       className={`dark ${geistSans.variable} ${geistMono.variable} ${fraunces.variable} h-full antialiased`}
       suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <head>
+        <script
+          // Runs before paint to apply the stored theme with no flash.
+          dangerouslySetInnerHTML={{ __html: themeNoFlashScript }}
+        />
+      </head>
+      <body className="min-h-full flex flex-col">
+        <AppInit />
+        <I18nProvider>{children}</I18nProvider>
+      </body>
     </html>
   );
 }

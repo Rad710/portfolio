@@ -89,6 +89,9 @@ export const resources = {
         liveLabel: "Live",
         codeLabel: "Code",
         featuredLabel: "Featured",
+        problemLabel: "The problem",
+        approachLabel: "The approach",
+        outcomeLabel: "The outcome",
         items: [
           {
             id: "text-to-sql-rag",
@@ -321,6 +324,9 @@ export const resources = {
         liveLabel: "En vivo",
         codeLabel: "Código",
         featuredLabel: "Destacado",
+        problemLabel: "El problema",
+        approachLabel: "El enfoque",
+        outcomeLabel: "El resultado",
         items: [
           {
             id: "text-to-sql-rag",

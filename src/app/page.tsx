@@ -5,10 +5,10 @@ import { Section, SectionHeading, Reveal } from "@/components/section";
 import { Hero } from "@/components/sections/hero";
 import { About } from "@/components/sections/about";
 import { Experience } from "@/components/sections/experience";
+import { Projects } from "@/components/sections/projects";
 
-/** Placeholder sections — replaced with real content in tasks 0007–0008. */
+/** Placeholder sections — replaced with real content in task 0008. */
 const STUBS = [
-  { id: "work", titleKey: "projects.title", label: "03" },
   { id: "skills", titleKey: "skills.title", label: "04" },
   { id: "contact", titleKey: "contact.title", label: "05" },
 ] as const;
@@ -21,6 +21,7 @@ export default function Home() {
       <Hero />
       <About />
       <Experience />
+      <Projects />
 
       {STUBS.map((s) => (
         <Section key={s.id} id={s.id} className="border-t border-border">

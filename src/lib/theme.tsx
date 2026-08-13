@@ -24,36 +24,36 @@ export const themeNoFlashScript = `
 `;
 
 function apply(t: Theme) {
-  if (typeof document === "undefined") return;
-  document.documentElement.classList.toggle("dark", t === "dark");
-  document.documentElement.style.colorScheme = t;
+    if (typeof document === "undefined") return;
+    document.documentElement.classList.toggle("dark", t === "dark");
+    document.documentElement.style.colorScheme = t;
 }
 
 type ThemeState = {
-  theme: Theme;
-  setTheme: (t: Theme) => void;
-  toggle: () => void;
-  /** Sync store with the persisted value on mount (SSR-safe). */
-  hydrate: () => void;
+    theme: Theme;
+    setTheme: (t: Theme) => void;
+    toggle: () => void;
+    /** Sync store with the persisted value on mount (SSR-safe). */
+    hydrate: () => void;
 };
 
 export const useThemeStore = create<ThemeState>((set, get) => ({
-  theme: DEFAULT_THEME,
-  setTheme: (t) => {
-    apply(t);
-    try {
-      localStorage.setItem(STORAGE_KEY, t);
-    } catch {}
-    set({ theme: t });
-  },
-  toggle: () => get().setTheme(get().theme === "dark" ? "light" : "dark"),
-  hydrate: () => {
-    try {
-      const stored = localStorage.getItem(STORAGE_KEY);
-      if (stored === "light" || stored === "dark") {
-        apply(stored);
-        set({ theme: stored });
-      }
-    } catch {}
-  },
+    theme: DEFAULT_THEME,
+    setTheme: (t) => {
+        apply(t);
+        try {
+            localStorage.setItem(STORAGE_KEY, t);
+        } catch {}
+        set({ theme: t });
+    },
+    toggle: () => get().setTheme(get().theme === "dark" ? "light" : "dark"),
+    hydrate: () => {
+        try {
+            const stored = localStorage.getItem(STORAGE_KEY);
+            if (stored === "light" || stored === "dark") {
+                apply(stored);
+                set({ theme: stored });
+            }
+        } catch {}
+    },
 }));

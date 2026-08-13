@@ -29,7 +29,8 @@ checklist, mark it `done`, then pick the next. The numbered list is the agreed b
 | 0008 | Skills + Contact sections | done | 0004 |
 | 0009 | CV — bilingual HTML source → ATS-friendly PDF (EN + ES), in-page download, fix shadcn→MUI inaccuracy | done | 0003 |
 | 0010 | Polish — SEO metadata, OpenGraph image, favicon, sitemap/robots, a11y + Lighthouse pass | done | 0005–0009 |
-| 0011 | Deploy — `node.Dockerfile` (standalone) matching the HIS convention + README + run instructions | proposed | 0010 |
+| [0011](0011-biome-organization/) | Biome tooling + code organization — 4-space format, lint, components split into layout/ui/sections | done | 0010 |
+| 0012 | Deploy — `node.Dockerfile` (standalone) matching the HIS convention + README + run instructions | proposed | 0011 |
 
 See [`../ai-workflow.md`](../ai-workflow.md) for how this repo is built, and
 [`../decisions/`](../decisions/README.md) for the immutable decision log.

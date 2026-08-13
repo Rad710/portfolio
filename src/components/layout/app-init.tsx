@@ -10,9 +10,9 @@ import { useThemeStore } from "@/lib/theme";
  * I18nProvider.)
  */
 export function AppInit() {
-  const hydrateTheme = useThemeStore((s) => s.hydrate);
-  useEffect(() => {
-    hydrateTheme();
-  }, [hydrateTheme]);
-  return null;
+    const hydrateTheme = useThemeStore((s) => s.hydrate);
+    useEffect(() => {
+        hydrateTheme();
+    }, [hydrateTheme]);
+    return null;
 }

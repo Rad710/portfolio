@@ -1,0 +1,42 @@
+# Pull-only production deploy for a single host, fronted by a Cloudflare Tunnel.
+# The image is built + pushed to GHCR by .github/workflows/release.yml — the VM only pulls it,
+# it never builds. No inbound ports are published — cloudflared dials OUT to Cloudflare and reaches
+# the web container on the internal compose network, so the origin IP stays hidden and the host
+# firewall only needs SSH. Independent of the DYR stack (own project name, own tunnel).
+#
+# On the VM, from a dir holding docker-compose.deploy.yml + .env:
+#   docker compose --env-file .env -f docker-compose.deploy.yml pull
+#   docker compose --env-file .env -f docker-compose.deploy.yml up -d
+name: portfolio
+
+services:
+  web:
+    image: ghcr.io/rad710/portfolio:${IMAGE_TAG:-latest}
+    # expose only — nothing is published to the host; the tunnel reaches web:3000.
+    expose:
+      - "3000"
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "node",
+          "-e",
+          "fetch('http://127.0.0.1:3000').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))",
+        ]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 20s
+    restart: unless-stopped
+
+  # Cloudflare Tunnel: dials out, routes the public hostname (rad710.com) → web:3000.
+  # No inbound ports on the host. Route/Service URL is configured in the Cloudflare dashboard.
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    command: tunnel --no-autoupdate run
+    environment:
+      TUNNEL_TOKEN: ${CF_TUNNEL_TOKEN:?set CF_TUNNEL_TOKEN in docker/.env (from the Cloudflare dashboard)}
+    depends_on:
+      web:
+        condition: service_healthy
+    restart: unless-stopped

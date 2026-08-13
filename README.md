@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio — Rolando Medina Rosner
 
-## Getting Started
+Personal portfolio of a full-stack engineer. Editorial-minimal, dark-first, bilingual (EN/ES), with
+downloadable CVs. Live at **[rad710.com](https://rad710.com)**.
 
-First, run the development server:
+## Stack
+
+- **Next.js 16** (App Router, `output: "standalone"`) · **React 19** with the **React Compiler** enabled
+- **Tailwind CSS v4** · **Motion** (reduced-motion aware)
+- **Zustand** (theme) · **react-i18next** (EN/ES, `t()` + resource bundles)
+- **Biome** (lint + format, 4-space) · **pnpm**
+
+## Develop
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm install
+pnpm dev              # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Other scripts:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+pnpm build            # production build (standalone output)
+pnpm check            # Biome: format + safe lint fixes
+pnpm lint             # Biome: lint only
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Structure
 
-## Learn More
+```
+src/
+  app/            routes, layout, metadata (sitemap/robots/icon), globals.css
+  components/
+    layout/       nav, footer, providers, app-init
+    sections/     hero, about, experience, projects, skills, contact
+    ui/           section/reveal, tech-tags, theme + language toggles, icons
+  content/        site.ts (EN/ES resource bundles) + types.ts
+  lib/            i18n, theme store, cn() util
+cv/               CV HTML sources + OG-image source (export to public/ with headless Chrome)
+docker/           node.Dockerfile, docker-compose.deploy.yml, DEPLOY.md
+docs/             tasks/ (build log) + decisions/ (ADRs) — how this repo was built
+```
 
-To learn more about Next.js, take a look at the following resources:
+## CV
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+`cv/cv-en.html` / `cv/cv-es.html` are the one-page, ATS-clean sources. Re-export after edits:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+google-chrome-stable --headless=new --no-pdf-header-footer \
+  --print-to-pdf="public/cv/Rolando_Medina_Rosner_CV_EN.pdf" "file://$PWD/cv/cv-en.html"
+```
 
-## Deploy on Vercel
+## Deploy
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Pull-only Docker image behind a Cloudflare Tunnel (no inbound host ports). See
+**[docker/DEPLOY.md](docker/DEPLOY.md)**.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## How this repo was built
+
+Built with Claude Code through small, reviewed, decision-logged tasks — see
+[`docs/ai-workflow.md`](docs/ai-workflow.md).

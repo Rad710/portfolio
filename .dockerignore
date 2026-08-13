@@ -1,0 +1,16 @@
+.git
+.github
+node_modules
+.next
+out
+docs
+cv
+*.md
+Dockerfile*
+docker-compose*
+.dockerignore
+.env
+.env.*
+npm-debug.log*
+.DS_Store
+.vscode

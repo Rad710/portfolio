@@ -2,14 +2,15 @@
 
 import { useTranslation } from "react-i18next";
 import { Section, SectionHeading, Reveal } from "@/components/section";
+import { Hero } from "@/components/sections/hero";
+import { About } from "@/components/sections/about";
 
-/** Placeholder sections — replaced with real content in tasks 0005–0008. */
+/** Placeholder sections — replaced with real content in tasks 0006–0008. */
 const STUBS = [
-  { id: "about", titleKey: "about.title" },
-  { id: "experience", titleKey: "experience.title" },
-  { id: "work", titleKey: "projects.title" },
-  { id: "skills", titleKey: "skills.title" },
-  { id: "contact", titleKey: "contact.title" },
+  { id: "experience", titleKey: "experience.title", label: "02" },
+  { id: "work", titleKey: "projects.title", label: "03" },
+  { id: "skills", titleKey: "skills.title", label: "04" },
+  { id: "contact", titleKey: "contact.title", label: "05" },
 ] as const;
 
 export default function Home() {
@@ -17,23 +18,13 @@ export default function Home() {
 
   return (
     <>
-      <Section className="flex min-h-[calc(100dvh-4rem)] flex-col justify-center">
-        <Reveal>
-          <p className="eyebrow mb-4">{t("hero.eyebrow")}</p>
-          <h1 className="max-w-3xl font-display text-5xl leading-[1.05] text-foreground sm:text-6xl md:text-7xl">
-            {t("hero.headline")}
-          </h1>
-          <p className="mt-6 max-w-xl text-lg text-muted">{t("hero.lead")}</p>
-          <p className="mt-4 font-mono text-xs text-faint">
-            {t("hero.location")}
-          </p>
-        </Reveal>
-      </Section>
+      <Hero />
+      <About />
 
       {STUBS.map((s) => (
         <Section key={s.id} id={s.id} className="border-t border-border">
           <Reveal>
-            <SectionHeading title={t(s.titleKey)} />
+            <SectionHeading eyebrow={`${s.label} / ${t(s.titleKey)}`} title={t(s.titleKey)} />
             <p className="text-muted">Coming next.</p>
           </Reveal>
         </Section>

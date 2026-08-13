@@ -23,7 +23,7 @@ checklist, mark it `done`, then pick the next. The numbered list is the agreed b
 | 0002 | Theme + language providers — dark-first `.dark` toggle and EN/ES toggle, both no-flash, wired into nav | done | 0001 |
 | 0003 | Bilingual content model — one typed source of truth for hero/about/experience/projects/skills/contact (EN + ES) | done | 0001 |
 | 0004 | Layout shell — sticky nav, footer, reusable animated `Section` primitive (respects reduced-motion) | done | 0002, 0003 |
-| 0005 | Hero + About sections | proposed | 0004 |
+| 0005 | Hero + About sections | done | 0004 |
 | 0006 | Experience section — Taiwan ICDF (HIS) + ROSHKA, quantified bullets | proposed | 0004 |
 | 0007 | Projects / case studies — DyR Transportes + text-to-sql-rag (problem → approach → stack → outcome, live links) | proposed | 0004 |
 | 0008 | Skills + Contact sections | proposed | 0004 |

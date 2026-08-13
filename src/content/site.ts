@@ -47,7 +47,7 @@ export const resources = {
             location: "Asunción, Paraguay",
             period: "Mar 2024 — present",
             summary:
-              "Own inpatient clinical modules end-to-end for the system used daily across the national public hospital network; led its legacy-to-React migration and introduced its containerized deployment.",
+              "On a three-person team, I'm the go-to engineer for frontend, backend internals, and deployment — I led the system's legacy-to-React migration and introduced its containerized deployment and CI/CD.",
             bullets: [
               "Own inpatient clinical modules end-to-end — physician orders, diagnoses, nursing workflows, pharmacy and medication requests, and medical-history PDF export — used daily by clinical staff nationwide.",
               "Rebuilt the largest legacy module from unmaintainable JSP and jQuery into structured TypeScript, and restructured its Struts backend into a DAO/DTO JSON API; replaced webpack with rsbuild to cut build times.",
@@ -279,7 +279,7 @@ export const resources = {
             location: "Asunción, Paraguay",
             period: "Mar 2024 — presente",
             summary:
-              "Dueño de módulos clínicos de internación de punta a punta del sistema usado a diario en toda la red pública nacional; lideré su migración de legado a React e introduje su despliegue en contenedores.",
+              "En un equipo de tres personas, soy la persona de referencia para frontend, internals del backend y despliegue — lideré la migración del sistema de legado a React e introduje su despliegue en contenedores y CI/CD.",
             bullets: [
               "Soy dueño de módulos clínicos de internación de punta a punta — indicaciones médicas, diagnósticos, flujos de enfermería, farmacia y solicitudes de medicamentos, y exportación del historial clínico a PDF — usados a diario por el personal clínico a nivel nacional.",
               "Reconstruí el módulo legado más grande, de JSP y jQuery inmantenibles a TypeScript estructurado, y reestructuré su backend en Struts hacia una API JSON con DAO/DTO; reemplacé webpack por rsbuild para reducir los tiempos de build.",

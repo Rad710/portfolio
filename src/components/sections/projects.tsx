@@ -2,6 +2,7 @@
 
 import { ExternalLink } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { GameConsole } from "@/components/ui/game-console";
 import { GitHubIcon } from "@/components/ui/icons";
 import { Reveal, Section } from "@/components/ui/section";
 import { TechTags } from "@/components/ui/tech-tags";
@@ -63,7 +64,11 @@ function FeaturedCard({ project }: { project: ProjectItem }) {
     const { t } = useTranslation();
     return (
         <article className="rounded-2xl border border-border bg-surface/40 p-6 transition-colors hover:border-accent/40 sm:p-8">
-            {project.image ? (
+            {project.playable ? (
+                <div className="mb-8">
+                    <GameConsole />
+                </div>
+            ) : project.image ? (
                 <div className="mb-8">
                     <BrowserFrame src={project.image} url={project.live} alt={project.name} />
                 </div>

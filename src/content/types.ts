@@ -20,6 +20,8 @@ export type ProjectItem = {
     code?: string;
     featured: boolean;
     image?: string;
+    /** Renders the playable WebAssembly build in place of a screenshot. */
+    playable?: boolean;
 };
 
 export type SkillGroup = {

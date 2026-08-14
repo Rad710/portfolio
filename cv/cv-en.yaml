@@ -66,12 +66,12 @@ cv:
           - React, TypeScript, Vite, and Material UI (X Data Grid/Charts) frontend; Flask and MySQL backend;
             self-hosted with multi-arch Docker and Jenkins pipelines, built solo.
       - name: Sentiment Analysis on Financial News
-        date: 2024-06
+        date: 2023
         summary: Final degree project
         highlights:
           - Collected an original financial-news dataset and compared machine-learning methods (finBERT,
             pyABSA) for classifying article tone against stock-price movement; flagged by the department as
-            one of the standout projects of the 2024 class.
+            one of the standout projects of the 2023 class.
     Education:
       - institution: Universidad Politécnica Taiwán – Paraguay (UPTP)
         area: Computer Engineering

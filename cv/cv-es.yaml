@@ -68,12 +68,12 @@ cv:
           - Frontend en React, TypeScript, Vite y Material UI (X Data Grid/Charts); backend en Flask y MySQL;
             autoalojado con Docker multiarquitectura y pipelines de Jenkins, hecho en solitario.
       - name: Análisis de Sentimiento en Noticias Financieras
-        date: 2024-06
+        date: 2023
         summary: Proyecto final de carrera
         highlights:
           - Recolecté un dataset original de noticias financieras y comparé métodos de machine learning
             (finBERT, pyABSA) para clasificar el tono de los artículos frente al movimiento del precio de las
-            acciones; la facultad lo marcó como uno de los proyectos destacados de la promoción 2024.
+            acciones; la facultad lo marcó como uno de los proyectos destacados de la promoción 2023.
     Educación:
       - institution: Universidad Politécnica Taiwán – Paraguay (UPTP)
         area: Ingeniería Informática

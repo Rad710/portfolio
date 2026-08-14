@@ -141,7 +141,7 @@ export const resources = {
                         id: "sentiment-analysis",
                         name: "Sentiment Analysis on Financial News",
                         tagline:
-                            "My final-year thesis: comparing NLP models (finBERT, pyABSA) at reading the tone of financial news, then checking it against how the stock actually moved. The department flagged it as one of the standout projects of the 2024 class.",
+                            "My final-year thesis: comparing NLP models (finBERT, pyABSA) at reading the tone of financial news, then checking it against how the stock actually moved. The department flagged it as one of the standout projects of the 2023 class.",
                         tech: ["PyTorch", "finBERT", "pyABSA", "pandas", "scikit-learn"],
                         featured: false,
                     },
@@ -364,7 +364,7 @@ export const resources = {
                         id: "sentiment-analysis",
                         name: "Análisis de Sentimiento en Noticias Financieras",
                         tagline:
-                            "Mi tesis de fin de carrera: comparar modelos de NLP (finBERT, pyABSA) leyendo el tono de las noticias financieras y cruzándolo con cómo se movió realmente la acción. La facultad lo marcó como uno de los proyectos destacados de la promoción 2024.",
+                            "Mi tesis de fin de carrera: comparar modelos de NLP (finBERT, pyABSA) leyendo el tono de las noticias financieras y cruzándolo con cómo se movió realmente la acción. La facultad lo marcó como uno de los proyectos destacados de la promoción 2023.",
                         tech: ["PyTorch", "finBERT", "pyABSA", "pandas", "scikit-learn"],
                         featured: false,
                     },

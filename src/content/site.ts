@@ -85,10 +85,21 @@ export const resources = {
             },
             projects: {
                 title: "Selected work",
-                lead: "Two production systems I built and run, and a research project.",
+                lead: "Two production systems I built and run, a text adventure you can play right here, and a research project.",
                 liveLabel: "Live",
                 codeLabel: "Code",
                 featuredLabel: "Featured",
+                game: {
+                    title: "The Fallen Kingdom",
+                    blurb: "A C++ text adventure compiled to WebAssembly. About 330 KB, downloaded only when you press play.",
+                    play: "Play",
+                    loading: "Loading…",
+                    retry: "Try again",
+                    error: "The game could not be loaded.",
+                    restart: "Restart",
+                    hint: "type a command — try: help",
+                    inputLabel: "Command",
+                },
                 items: [
                     {
                         id: "text-to-sql-rag",
@@ -136,6 +147,18 @@ export const resources = {
                         code: "https://github.com/Rad710/dyrtransportes_react",
                         featured: true,
                         image: "/projects/dyr-transportes.png",
+                    },
+                    {
+                        id: "fallen-kingdom",
+                        name: "The Fallen Kingdom",
+                        tagline:
+                            "A text adventure I wrote in C++ after an OOP course, compiled to WebAssembly and playable right above — the same code still builds as a Windows console app.",
+                        description:
+                            "21 rooms, 24 enemies, and a lamp that burns down with every action you take. The 2021 game logic is untouched; only the console I/O was replaced, because a browser tab cannot block inside std::getline without freezing the page. Emscripten's Asyncify suspends the whole C++ call stack instead, so the original loop still reads a line the way it always did. Around 113 KB gzipped.",
+                        tech: ["C++17", "WebAssembly", "Emscripten", "Asyncify", "React 19"],
+                        code: "https://github.com/Rad710/text-based-game",
+                        featured: true,
+                        playable: true,
                     },
                     {
                         id: "sentiment-analysis",
@@ -308,10 +331,21 @@ export const resources = {
             },
             projects: {
                 title: "Proyectos seleccionados",
-                lead: "Dos sistemas en producción que construí y mantengo, y un proyecto de investigación.",
+                lead: "Dos sistemas en producción que construí y mantengo, una aventura de texto que podés jugar acá mismo, y un proyecto de investigación.",
                 liveLabel: "En vivo",
                 codeLabel: "Código",
                 featuredLabel: "Destacado",
+                game: {
+                    title: "The Fallen Kingdom",
+                    blurb: "Una aventura de texto en C++ compilada a WebAssembly. Unos 330 KB, que se descargan recién cuando le das a jugar.",
+                    play: "Jugar",
+                    loading: "Cargando…",
+                    retry: "Reintentar",
+                    error: "No se pudo cargar el juego.",
+                    restart: "Reiniciar",
+                    hint: "escribí un comando — probá: help",
+                    inputLabel: "Comando",
+                },
                 items: [
                     {
                         id: "text-to-sql-rag",
@@ -359,6 +393,18 @@ export const resources = {
                         code: "https://github.com/Rad710/dyrtransportes_react",
                         featured: true,
                         image: "/projects/dyr-transportes.png",
+                    },
+                    {
+                        id: "fallen-kingdom",
+                        name: "The Fallen Kingdom",
+                        tagline:
+                            "Una aventura de texto que escribí en C++ después de una materia de POO, compilada a WebAssembly y jugable acá arriba — el mismo código sigue compilando como programa de consola de Windows. El juego está en inglés.",
+                        description:
+                            "21 salas, 24 enemigos y una lámpara que se va gastando con cada acción. La lógica del juego de 2021 quedó intacta; sólo cambió la entrada y salida por consola, porque una pestaña del navegador no puede quedarse bloqueada dentro de std::getline sin congelar la página. En su lugar, Asyncify de Emscripten suspende toda la pila de llamadas de C++, así el bucle original sigue leyendo una línea como siempre lo hizo. Alrededor de 113 KB comprimidos.",
+                        tech: ["C++17", "WebAssembly", "Emscripten", "Asyncify", "React 19"],
+                        code: "https://github.com/Rad710/text-based-game",
+                        featured: true,
+                        playable: true,
                     },
                     {
                         id: "sentiment-analysis",

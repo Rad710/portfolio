@@ -23,19 +23,19 @@ export const resources = {
             },
             hero: {
                 eyebrow: "Full-stack engineer",
-                headline: "I build software that hospitals run on.",
-                lead: "Full-stack engineer with three years building and modernizing the hospital information system used across Paraguay's national public hospital network — frontend, backend internals, deployment, and applied AI.",
+                headline: "Rolando Medina Rosner",
+                lead: "For the past three years I've worked on the software Paraguay's public hospitals use every day. I mostly handle the backend and deployment, but I also led the rewrite of the frontend to React and built an offline version for the hospitals where the connection drops for days at a time.",
                 ctaWork: "See my work",
                 ctaContact: "Get in touch",
                 location: "Asunción, Paraguay · open to remote",
             },
             about: {
                 title: "About",
-                lead: "I like the parts of the stack most people avoid.",
+                lead: "Mostly backend, but I do the whole stack.",
                 body: [
-                    "I'm a full-stack engineer on a three-person team responsible for the hospital information system used daily by clinical staff across Paraguay's national public hospital network. I own inpatient clinical modules end-to-end and I'm the go-to person for frontend, backend internals, and deployment.",
-                    "My favorite work sits below the UI: turning an unmaintainable legacy module into a structured TypeScript app and a clean JSON API, making a hospital keep working through multi-day connectivity loss, or getting a self-hosted language model to answer questions over a clinical database safely. I care about systems that stay correct under real-world constraints.",
-                    "Backend-leaning by taste, but I ship the frontend too — and I care that it looks and feels right.",
+                    "I'm on a three-person team that builds the hospital information system clinical staff use every day across Paraguay's public hospitals. I own the inpatient clinical modules, and I'm usually the one the team comes to for the backend, deployment, and the harder frontend work.",
+                    "The part I actually enjoy is the plumbing: taking a legacy module nobody could maintain and rebuilding it as a clean TypeScript app with a proper API, or keeping a hospital running through days with no connection. Lately it's meant getting a self-hosted model to answer questions about the database without ever being able to change the data.",
+                    "Outside work I self-host almost everything I build: my own servers, CI, and tunnels. That's where most of my infrastructure and deployment habits come from.",
                 ],
             },
             experience: {
@@ -47,7 +47,7 @@ export const resources = {
                         location: "Asunción, Paraguay",
                         period: "Mar 2024 — present",
                         summary:
-                            "On a three-person team, I'm the go-to engineer for frontend, backend internals, and deployment — I led the system's legacy-to-React migration and introduced its containerized deployment and CI/CD.",
+                            "One of three engineers on the system. I handle most of the frontend, the backend internals, and deployment, and I led both the move off the legacy code to React and the switch to containerized deploys with CI/CD.",
                         bullets: [
                             "Own inpatient clinical modules end-to-end — physician orders, diagnoses, nursing workflows, pharmacy and medication requests, and medical-history PDF export — used daily by clinical staff nationwide.",
                             "Rebuilt the largest legacy module from unmaintainable JSP and jQuery into structured TypeScript, and restructured its Struts backend into a DAO/DTO JSON API; replaced webpack with rsbuild to cut build times.",
@@ -94,9 +94,9 @@ export const resources = {
                         id: "text-to-sql-rag",
                         name: "Text-to-SQL RAG",
                         tagline:
-                            "Ask a question in plain English and get an answer from the database — as safe, read-only SQL.",
+                            "Ask a question in plain language and get the answer from the database, without writing any SQL yourself.",
                         description:
-                            "It finds the relevant tables, writes a SELECT, runs it, and shows the result as a table or chart. Every query is validated before it runs, so the model can read the database but never change it. Runs fully self-hosted.",
+                            "It works out which tables matter, writes a SELECT, runs it, and shows the result as a table or chart. Nothing it generates can touch the data: every query is checked first and rejected if it isn't read-only. The whole thing runs on my own hardware, with no external API calls.",
                         tech: [
                             "FastAPI",
                             "Python",
@@ -118,9 +118,9 @@ export const resources = {
                         id: "dyr-transportes",
                         name: "D y R Transportes",
                         tagline:
-                            "The logistics platform a grain-transport company runs its day-to-day on — trips, cargo, and driver payments.",
+                            "The tool a grain-transport company uses to track its trips, cargo, and driver pay.",
                         description:
-                            "It logs trips, generates driver payrolls, and exports the reports the national transport regulator requires. I built the whole stack — the React front end, the Flask/MySQL API — and the self-hosted CI/CD pipeline that ships it.",
+                            "It records every trip, works out what each driver is owed, and produces the reports the national transport regulator asks for. I built all of it: the React frontend, the Flask and MySQL API, and the self-hosted pipeline that deploys it.",
                         tech: [
                             "React 19",
                             "TypeScript",
@@ -132,7 +132,7 @@ export const resources = {
                             "Docker",
                             "Jenkins",
                         ],
-                        live: "https://rad710.pythonanywhere.com/",
+                        live: "https://dyr.rad710.com",
                         code: "https://github.com/Rad710/dyrtransportes_react",
                         featured: true,
                         image: "/projects/dyr-transportes.png",
@@ -141,7 +141,7 @@ export const resources = {
                         id: "sentiment-analysis",
                         name: "Sentiment Analysis on Financial News",
                         tagline:
-                            "Final-year research comparing NLP methods (pyABSA, finBERT) for classifying financial-news tone against stock-price movement — recognised by faculty as an outstanding project of the 2024 cohort.",
+                            "My final-year thesis: comparing NLP models (finBERT, pyABSA) at reading the tone of financial news, then checking it against how the stock actually moved. The department flagged it as one of the standout projects of the 2024 class.",
                         tech: ["PyTorch", "finBERT", "pyABSA", "pandas", "scikit-learn"],
                         featured: false,
                     },
@@ -149,7 +149,7 @@ export const resources = {
             },
             skills: {
                 title: "Skills",
-                lead: "What I reach for, grouped by where it lives in the stack.",
+                lead: "The tools I work with most, by area.",
                 groups: [
                     {
                         label: "Languages",
@@ -246,19 +246,19 @@ export const resources = {
             },
             hero: {
                 eyebrow: "Ingeniero full-stack",
-                headline: "Construyo el software sobre el que funcionan los hospitales.",
-                lead: "Ingeniero full-stack con tres años construyendo y modernizando el sistema de información hospitalaria de la red pública nacional del Paraguay — frontend, internals del backend, despliegue e IA aplicada.",
+                headline: "Rolando Medina Rosner",
+                lead: "Los últimos tres años trabajé en el software que los hospitales públicos del Paraguay usan todos los días. Me encargo sobre todo del backend y el despliegue, pero también lideré la reescritura del frontend a React y armé una versión que sigue andando cuando el internet se cae por días.",
                 ctaWork: "Ver mis proyectos",
                 ctaContact: "Contactarme",
                 location: "Asunción, Paraguay · abierto a remoto",
             },
             about: {
                 title: "Sobre mí",
-                lead: "Me gustan las partes del stack que la mayoría evita.",
+                lead: "Sobre todo backend, pero hago todo el stack.",
                 body: [
-                    "Soy ingeniero full-stack en un equipo de tres personas responsable del sistema de información hospitalaria que el personal clínico usa a diario en toda la red pública nacional del Paraguay. Soy dueño de módulos clínicos de internación de punta a punta y la persona de referencia para frontend, internals del backend y despliegue.",
-                    "Mi trabajo favorito está debajo de la interfaz: convertir un módulo legado inmantenible en una app estructurada de TypeScript con una API JSON limpia, lograr que un hospital siga funcionando durante días sin conexión, o hacer que un modelo de lenguaje autoalojado responda de forma segura sobre una base de datos clínica. Me importan los sistemas que siguen siendo correctos bajo restricciones reales.",
-                    "De preferencia backend, pero también entrego el frontend — y me importa que se vea y se sienta bien.",
+                    "Estoy en un equipo de tres personas que construye el sistema de información hospitalaria que el personal clínico usa todos los días en los hospitales públicos del Paraguay. Soy dueño de los módulos clínicos de internación, y suelo ser a quien el equipo recurre para el backend, el despliegue y el frontend más complicado.",
+                    "Lo que de verdad disfruto es la parte de abajo: agarrar un módulo legado que nadie podía mantener y rehacerlo como una app limpia de TypeScript con una API en condiciones, o mantener un hospital operando durante días sin conexión. Últimamente eso significó lograr que un modelo autoalojado responda preguntas sobre la base de datos sin poder modificar nunca los datos.",
+                    "Fuera del trabajo autoalojo casi todo lo que hago: mis propios servidores, el CI, los túneles. De ahí viene buena parte de mis mañas de infraestructura y despliegue.",
                 ],
             },
             experience: {
@@ -270,7 +270,7 @@ export const resources = {
                         location: "Asunción, Paraguay",
                         period: "Mar 2024 — presente",
                         summary:
-                            "En un equipo de tres personas, soy la persona de referencia para frontend, internals del backend y despliegue — lideré la migración del sistema de legado a React e introduje su despliegue en contenedores y CI/CD.",
+                            "Uno de los tres ingenieros del sistema. Me encargo de la mayor parte del frontend, de los internals del backend y del despliegue, y lideré tanto la salida del código legado hacia React como el paso a despliegues en contenedores con CI/CD.",
                         bullets: [
                             "Soy dueño de módulos clínicos de internación de punta a punta — indicaciones médicas, diagnósticos, flujos de enfermería, farmacia y solicitudes de medicamentos, y exportación del historial clínico a PDF — usados a diario por el personal clínico a nivel nacional.",
                             "Reconstruí el módulo legado más grande, de JSP y jQuery inmantenibles a TypeScript estructurado, y reestructuré su backend en Struts hacia una API JSON con DAO/DTO; reemplacé webpack por rsbuild para reducir los tiempos de build.",
@@ -317,9 +317,9 @@ export const resources = {
                         id: "text-to-sql-rag",
                         name: "Text-to-SQL RAG",
                         tagline:
-                            "Preguntá en lenguaje natural y obtené una respuesta de la base de datos — como SQL seguro y de solo lectura.",
+                            "Preguntá en lenguaje natural y obtené la respuesta directo de la base de datos, sin escribir nada de SQL.",
                         description:
-                            "Encuentra las tablas relevantes, escribe un SELECT, lo ejecuta y muestra el resultado como tabla o gráfico. Cada consulta se valida antes de ejecutarse, así el modelo puede leer la base de datos pero nunca modificarla. Corre totalmente autoalojado.",
+                            "Descubre qué tablas importan, escribe un SELECT, lo ejecuta y muestra el resultado como tabla o gráfico. Nada de lo que genera puede tocar los datos: cada consulta se revisa antes y se rechaza si no es de solo lectura. Todo corre en mi propio hardware, sin llamadas a APIs externas.",
                         tech: [
                             "FastAPI",
                             "Python",
@@ -341,9 +341,9 @@ export const resources = {
                         id: "dyr-transportes",
                         name: "D y R Transportes",
                         tagline:
-                            "La plataforma logística sobre la que una empresa de transporte de granos gestiona su día a día — viajes, carga y pagos a choferes.",
+                            "La herramienta con la que una empresa de transporte de granos lleva sus viajes, la carga y los pagos a los choferes.",
                         description:
-                            "Registra viajes, genera las liquidaciones de los choferes y exporta los reportes que exige el ente regulador nacional de transporte. Construí todo el stack — el front-end en React, la API en Flask/MySQL — y el pipeline de CI/CD autoalojado que lo despliega.",
+                            "Registra cada viaje, calcula lo que le corresponde a cada chofer y genera los reportes que exige el ente regulador nacional de transporte. Lo hice todo: el frontend en React, la API en Flask y MySQL, y el pipeline autoalojado que lo despliega.",
                         tech: [
                             "React 19",
                             "TypeScript",
@@ -355,7 +355,7 @@ export const resources = {
                             "Docker",
                             "Jenkins",
                         ],
-                        live: "https://rad710.pythonanywhere.com/",
+                        live: "https://dyr.rad710.com",
                         code: "https://github.com/Rad710/dyrtransportes_react",
                         featured: true,
                         image: "/projects/dyr-transportes.png",
@@ -364,7 +364,7 @@ export const resources = {
                         id: "sentiment-analysis",
                         name: "Análisis de Sentimiento en Noticias Financieras",
                         tagline:
-                            "Investigación de fin de carrera comparando métodos de NLP (pyABSA, finBERT) para clasificar el tono de noticias financieras frente al movimiento del precio de las acciones — reconocido por la facultad como un proyecto destacado de la promoción 2024.",
+                            "Mi tesis de fin de carrera: comparar modelos de NLP (finBERT, pyABSA) leyendo el tono de las noticias financieras y cruzándolo con cómo se movió realmente la acción. La facultad lo marcó como uno de los proyectos destacados de la promoción 2024.",
                         tech: ["PyTorch", "finBERT", "pyABSA", "pandas", "scikit-learn"],
                         featured: false,
                     },
@@ -372,7 +372,7 @@ export const resources = {
             },
             skills: {
                 title: "Habilidades",
-                lead: "Lo que uso, agrupado por dónde vive en el stack.",
+                lead: "Las herramientas que más uso, por área.",
                 groups: [
                     {
                         label: "Lenguajes",

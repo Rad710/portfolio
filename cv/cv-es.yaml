@@ -1,0 +1,152 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/rendercv/rendercv/refs/tags/v2.8/schema.json
+cv:
+  name: Rolando Medina Rosner
+  headline: Ingeniero de Software Full-stack
+  location: Asunción, Paraguay (abierto a remoto)
+  email: rolmedro@gmail.com
+  phone: "+595985941268"
+  website: https://rad710.com
+  social_networks:
+    - network: GitHub
+      username: Rad710
+    - network: LinkedIn
+      username: rolando-medina-rosner-533718238
+  sections:
+    Resumen:
+      - Ingeniero full-stack con 3 años construyendo y modernizando el sistema de información hospitalaria
+        usado en toda la red pública nacional de hospitales del Paraguay. En un equipo de tres personas,
+        lideré su migración desde Java/jQuery legado hacia React y TypeScript, introduje su despliegue en
+        contenedores y CI/CD, y me encargo de la mayor parte de su frontend, sus internals del backend y su
+        despliegue.
+    Experiencia:
+      - company: Taiwan ICDF — Sistema Nacional de Información Hospitalaria
+        position: Ingeniero de Software
+        location: Asunción, Paraguay
+        start_date: 2024-03
+        end_date: present
+        highlights:
+          - Soy dueño de módulos clínicos de internación de punta a punta (indicaciones médicas, diagnósticos,
+            flujos de enfermería, farmacia y solicitudes de medicamentos, exportación del historial clínico a
+            PDF), usados a diario por el personal clínico en toda la red pública nacional de hospitales.
+          - Reconstruí el módulo legado más grande, de JSP y jQuery inmantenibles a TypeScript estructurado, y
+            reestructuré su backend en Struts hacia una API JSON con DAO/DTO; reemplacé webpack por rsbuild
+            para reducir los tiempos de build.
+          - Evalué Lit y React para la reescritura del frontend, propuse React tras comprobar que Lit no
+            cumplía los requisitos de SSR, construí toda la configuración del proyecto y migré los tres
+            módulos más complejos (médico, enfermería, farmacia) a producción con solo incidencias menores el
+            día del lanzamiento.
+          - Construyo una PWA offline-first para que los hospitales rurales sigan operando durante días sin
+            conexión, con una bandeja de salida en IndexedDB, sincronización en segundo plano con service
+            worker y DTOs versionados que migran datos obsoletos del cliente al reconectar.
+          - Reemplacé los despliegues de WAR por scripts con un esquema de Docker Compose de dos imágenes;
+            prototipé un clúster k3s y evalué OpenYurt para servidores hospitalarios en el borde.
+          - Autoalojé un LLM y escribí el esquema, la recuperación y la capa de prompts que habilitan
+            consultas en lenguaje natural a SQL sobre la base de datos clínica.
+      - company: ROSHKA S.A.
+        position: Ingeniero DevOps Jr. (previamente Pasante de Frontend)
+        location: Asunción, Paraguay
+        start_date: 2023-08
+        end_date: 2024-02
+        highlights:
+          - Construí pipelines de CI/CD en Jenkins usando Git Flow y GitHub Flow, contenericé servicios con
+            Docker e integré quality gates de SonarQube.
+          - Aporté trabajo de frontend en React a una aplicación web bancaria como pasante; contratado a
+            tiempo completo en un rol de ingeniería al finalizar.
+    Proyectos:
+      - name: "[Text-to-SQL RAG](https://dyr-ai.rad710.com/login)"
+        summary: "Asistente de lenguaje natural a SQL, autoalojable — [código](https://github.com/Rad710/text-to-sql-rag)"
+        highlights:
+          - Responde preguntas en lenguaje natural escribiendo SQL seguro y de solo lectura, con seguridad en
+            profundidad (usuario de BD solo-SELECT, validación AST con sqlglot, LIMIT forzado), recuperación
+            RAG de 4 niveles, streaming por SSE y un servidor MCP.
+          - FastAPI, Python, React 19, ChromaDB, Ollama/vLLM; corre totalmente autoalojado, sin APIs externas.
+      - name: "[D y R Transportes](https://dyr.rad710.com)"
+        summary: "Plataforma logística en producción — [código](https://github.com/Rad710/dyrtransportes_react)"
+        highlights:
+          - En uso diario en producción por una empresa de transporte de granos para registros de viajes,
+            carga y pagos a choferes, incluidos los reportes que exige el ente regulador nacional de
+            transporte.
+          - Frontend en React, TypeScript, Vite y Material UI (X Data Grid/Charts); backend en Flask y MySQL;
+            autoalojado con Docker multiarquitectura y pipelines de Jenkins, hecho en solitario.
+      - name: Análisis de Sentimiento en Noticias Financieras
+        date: 2024-06
+        summary: Proyecto final de carrera
+        highlights:
+          - Recolecté un dataset original de noticias financieras y comparé métodos de machine learning
+            (finBERT, pyABSA) para clasificar el tono de los artículos frente al movimiento del precio de las
+            acciones; la facultad lo marcó como uno de los proyectos destacados de la promoción 2024.
+    Educación:
+      - institution: Universidad Politécnica Taiwán – Paraguay (UPTP)
+        area: Ingeniería Informática
+        degree: Lic.
+        start_date: 2020
+        end_date: 2024
+        highlights:
+          - Promedio 4.81 / 5.00. Estudiante de intercambio en la National Taiwan University of Science and
+            Technology (NTUST), 2022–2023.
+    Habilidades:
+      - label: Frontend
+        details: TypeScript, React, Next.js, PWA y service workers, IndexedDB, Tailwind CSS, Material UI, shadcn/ui
+      - label: Backend
+        details: Java (Struts, Spring Boot), Python (Flask, FastAPI), diseño de APIs REST, SQL, MySQL, PostgreSQL, C/C++
+      - label: Infraestructura
+        details: Docker, Kubernetes (k3s), Terraform, GitLab CI, Jenkins, Proxmox, Linux
+      - label: IA / Datos
+        details: PyTorch, scikit-learn, pandas, NumPy, modelos transformer, LLMs autoalojados (vLLM), RAG
+      - label: Idiomas
+        details: Español (nativo), Inglés (TOEFL iBT 109/120), Alemán (B1), Mandarín (elemental)
+      - label: Certificaciones
+        details: NVIDIA DLI Fundamentos de Deep Learning; Machine Learning (Stanford); Statistics 110 (Harvard)
+
+design:
+  theme: engineeringresumes
+  page:
+    size: us-letter
+    top_margin: 0.4in
+    bottom_margin: 0.4in
+    left_margin: 0.55in
+    right_margin: 0.55in
+  typography:
+    line_spacing: 0.4em
+    font_size:
+      body: 8.5pt
+      name: 19pt
+  section_titles:
+    space_above: 0.2cm
+    space_below: 0.12cm
+  sections:
+    space_between_regular_entries: 0.16cm
+    space_between_text_based_entries: 0.08cm
+  entries:
+    space_between_columns: 0.1cm
+    highlights:
+      space_between_items: 0.08cm
+
+locale:
+  language: spanish
+  last_updated: Última actualización en
+  present: actualidad
+  month_abbreviations:
+    - ene.
+    - feb.
+    - mar.
+    - abr.
+    - may.
+    - jun.
+    - jul.
+    - ago.
+    - sept.
+    - oct.
+    - nov.
+    - dic.
+  phrases:
+    degree_with_area: DEGREE en AREA
+
+settings:
+  current_date: "2026-08-14"
+  render_command:
+    output_folder: rendercv_output
+    pdf_path: ../public/cv/Rolando_Medina_Rosner_CV_ES.pdf
+    dont_generate_markdown: true
+    dont_generate_html: true
+    dont_generate_png: true

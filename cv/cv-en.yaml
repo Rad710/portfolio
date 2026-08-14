@@ -1,0 +1,132 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/rendercv/rendercv/refs/tags/v2.8/schema.json
+cv:
+  name: Rolando Medina Rosner
+  headline: Full-stack Software Engineer
+  location: Asunción, Paraguay (open to remote)
+  email: rolmedro@gmail.com
+  phone: "+595985941268"
+  website: https://rad710.com
+  social_networks:
+    - network: GitHub
+      username: Rad710
+    - network: LinkedIn
+      username: rolando-medina-rosner-533718238
+  sections:
+    Summary:
+      - Full-stack engineer with 3 years building and modernizing the hospital information system used
+        across Paraguay's national public hospital network. On a three-person team, I led its migration off
+        legacy Java/jQuery to React and TypeScript, introduced its containerized deployment and CI/CD, and
+        handle most of its frontend, backend internals, and deployment work.
+    Experience:
+      - company: Taiwan ICDF — National Hospital Information System
+        position: Software Engineer
+        location: Asunción, Paraguay
+        start_date: 2024-03
+        end_date: present
+        highlights:
+          - Own inpatient clinical modules end-to-end (physician orders, diagnoses, nursing workflows,
+            pharmacy and medication requests, medical-history PDF export), used daily by clinical staff
+            across the national public hospital network.
+          - Rebuilt the largest legacy module from unmaintainable JSP and jQuery into structured TypeScript
+            and restructured its Struts backend into a DAO/DTO JSON API; replaced webpack with rsbuild to cut
+            build times.
+          - Evaluated Lit and React for the frontend rewrite, proposed React after Lit could not meet SSR
+            requirements, built the entire project setup, and migrated the three most complex modules
+            (physician, nursing, pharmacy) to production with only minor launch-day issues.
+          - Building an offline-first PWA so rural hospitals keep operating through multi-day connectivity
+            loss, using an IndexedDB outbox, service-worker background sync, and version-tagged DTOs that
+            migrate stale client data on reconnect.
+          - Replaced script-based WAR deployments with a two-image Docker Compose setup; prototyped a k3s
+            cluster and evaluated OpenYurt for edge-deployed hospital servers.
+          - Self-hosted an LLM and wrote the schema, retrieval, and prompt layer enabling
+            natural-language-to-SQL queries over the clinical database.
+      - company: ROSHKA S.A.
+        position: DevOps Engineer Jr. (previously Frontend Developer Intern)
+        location: Asunción, Paraguay
+        start_date: 2023-08
+        end_date: 2024-02
+        highlights:
+          - Built Jenkins CI/CD pipelines using Git Flow and GitHub Flow, containerized services with Docker,
+            and integrated SonarQube quality gates.
+          - Contributed React frontend work to a banking web application as an intern; hired into a full-time
+            engineering role at its conclusion.
+    Projects:
+      - name: "[Text-to-SQL RAG](https://dyr-ai.rad710.com/login)"
+        summary: "Self-hostable natural-language-to-SQL assistant — [code](https://github.com/Rad710/text-to-sql-rag)"
+        highlights:
+          - Answers plain-language questions by writing safe, read-only SQL, with defense-in-depth safety
+            (SELECT-only DB user, sqlglot AST validation, enforced LIMIT), 4-tier RAG retrieval, SSE
+            streaming, and an MCP server.
+          - FastAPI, Python, React 19, ChromaDB, Ollama/vLLM; runs fully self-hosted with no external API.
+      - name: "[D y R Transportes](https://dyr.rad710.com)"
+        summary: "Production logistics platform — [code](https://github.com/Rad710/dyrtransportes_react)"
+        highlights:
+          - In daily production use by a grain-transport company for trip, cargo, and driver-payment records,
+            including the reports required by the national transport regulator.
+          - React, TypeScript, Vite, and Material UI (X Data Grid/Charts) frontend; Flask and MySQL backend;
+            self-hosted with multi-arch Docker and Jenkins pipelines, built solo.
+      - name: Sentiment Analysis on Financial News
+        date: 2024-06
+        summary: Final degree project
+        highlights:
+          - Collected an original financial-news dataset and compared machine-learning methods (finBERT,
+            pyABSA) for classifying article tone against stock-price movement; flagged by the department as
+            one of the standout projects of the 2024 class.
+    Education:
+      - institution: Universidad Politécnica Taiwán – Paraguay (UPTP)
+        area: Computer Engineering
+        degree: BSc
+        start_date: 2020
+        end_date: 2024
+        highlights:
+          - GPA 4.81 / 5.00. Exchange student at National Taiwan University of Science and Technology
+            (NTUST), 2022–2023.
+    Skills:
+      - label: Frontend
+        details: TypeScript, React, Next.js, PWA and service workers, IndexedDB, Tailwind CSS, Material UI, shadcn/ui
+      - label: Backend
+        details: Java (Struts, Spring Boot), Python (Flask, FastAPI), REST API design, SQL, MySQL, PostgreSQL, C/C++
+      - label: Infrastructure
+        details: Docker, Kubernetes (k3s), Terraform, GitLab CI, Jenkins, Proxmox, Linux
+      - label: AI / Data
+        details: PyTorch, scikit-learn, pandas, NumPy, transformer models, self-hosted LLMs (vLLM), RAG
+      - label: Languages
+        details: Spanish (native), English (TOEFL iBT 109/120), German (B1), Mandarin (elementary)
+      - label: Certifications
+        details: NVIDIA DLI Fundamentals of Deep Learning; Machine Learning (Stanford); Statistics 110 (Harvard)
+
+design:
+  theme: engineeringresumes
+  page:
+    size: us-letter
+    top_margin: 0.4in
+    bottom_margin: 0.4in
+    left_margin: 0.55in
+    right_margin: 0.55in
+  typography:
+    line_spacing: 0.4em
+    font_size:
+      body: 8.5pt
+      name: 19pt
+  section_titles:
+    space_above: 0.2cm
+    space_below: 0.12cm
+  sections:
+    space_between_regular_entries: 0.16cm
+    space_between_text_based_entries: 0.08cm
+  entries:
+    space_between_columns: 0.1cm
+    highlights:
+      space_between_items: 0.08cm
+
+locale:
+  language: english
+
+settings:
+  current_date: "2026-08-14"
+  render_command:
+    output_folder: rendercv_output
+    pdf_path: ../public/cv/Rolando_Medina_Rosner_CV_EN.pdf
+    dont_generate_markdown: true
+    dont_generate_html: true
+    dont_generate_png: true

@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# rendercv scratch output (PDFs are written directly to public/cv/)
+/cv/rendercv_output/

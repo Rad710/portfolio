@@ -43,12 +43,16 @@ docs/             tasks/ (build log) + decisions/ (ADRs) — how this repo was b
 
 ## CV
 
-`cv/cv-en.html` / `cv/cv-es.html` are the one-page, ATS-clean sources. Re-export after edits:
+`cv/cv-en.yaml` / `cv/cv-es.yaml` are the one-page, ATS-clean sources, rendered with
+[RenderCV](https://rendercv.com/) (`engineeringresumes` theme, bundled Typst — no TeX needed).
+Install once, then re-render after edits:
 
 ```bash
-google-chrome-stable --headless=new --no-pdf-header-footer \
-  --print-to-pdf="public/cv/Rolando_Medina_Rosner_CV_EN.pdf" "file://$PWD/cv/cv-en.html"
+uv tool install "rendercv[full]"   # one-time
+./scripts/build-cv.sh              # renders both PDFs into public/cv/
 ```
+
+Each YAML's `settings.render_command.pdf_path` writes straight to `public/cv/`.
 
 ## Deploy
 

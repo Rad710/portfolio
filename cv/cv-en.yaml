@@ -14,9 +14,9 @@ cv:
   sections:
     Summary:
       - Full-stack engineer with 3 years building and modernizing the hospital information system used
-        across Paraguay's national public hospital network. On a three-person team, I led its migration off
-        legacy Java/jQuery to React and TypeScript, introduced its containerized deployment and CI/CD, and
-        handle most of its frontend, backend internals, and deployment work.
+        across Paraguay's national public hospital network. On a three-person team, led its migration off
+        legacy Java/jQuery to React and TypeScript, introduced containerized deployment and CI/CD, and now
+        own most of its frontend, backend internals, and deployment work.
     Experience:
       - company: Taiwan ICDF — National Hospital Information System
         position: Software Engineer
@@ -27,12 +27,12 @@ cv:
           - Own inpatient clinical modules end-to-end (physician orders, diagnoses, nursing workflows,
             pharmacy and medication requests, medical-history PDF export), used daily by clinical staff
             across the national public hospital network.
-          - Rebuilt the largest legacy module from unmaintainable JSP and jQuery into structured TypeScript
-            and restructured its Struts backend into a DAO/DTO JSON API; replaced webpack with rsbuild to cut
-            build times.
-          - Evaluated Lit and React for the frontend rewrite, proposed React after Lit could not meet SSR
-            requirements, built the entire project setup, and migrated the three most complex modules
-            (physician, nursing, pharmacy) to production with only minor launch-day issues.
+          - Rebuilt the largest legacy module from unmaintainable JSP/jQuery into structured TypeScript, and
+            restructured its Struts backend into a DAO/DTO JSON API.
+          - Replaced webpack with rsbuild, cutting frontend build times by ~60%.
+          - Chose React over Lit for the rewrite (Lit could not meet SSR requirements), built the entire
+            project setup, and shipped the three most complex modules — physician, nursing, pharmacy — to
+            production.
           - Building an offline-first PWA so rural hospitals keep operating through multi-day connectivity
             loss, using an IndexedDB outbox, service-worker background sync, and version-tagged DTOs that
             migrate stale client data on reconnect.

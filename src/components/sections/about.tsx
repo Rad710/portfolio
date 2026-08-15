@@ -12,7 +12,6 @@ export function About() {
             <div className="grid gap-y-10 md:grid-cols-12 md:gap-x-12">
                 <div className="md:col-span-4">
                     <Reveal>
-                        <p className="eyebrow mb-3">01 / {t("about.title")}</p>
                         <h2 className="font-display text-3xl text-foreground sm:text-4xl">
                             {t("about.lead")}
                         </h2>

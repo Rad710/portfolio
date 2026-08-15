@@ -8,7 +8,7 @@ export function LangToggle() {
     return (
         <fieldset
             aria-label="Language"
-            className="m-0 flex items-center rounded-full border border-border p-0.5 font-mono text-xs"
+            className="m-0 flex items-center rounded-full border border-border bg-background p-0.5 font-mono text-xs"
         >
             {(["en", "es"] as const).map((l) => {
                 const active = lang === l;

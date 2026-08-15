@@ -85,7 +85,7 @@ export const resources = {
             },
             projects: {
                 title: "Selected work",
-                lead: "Two production systems I built and run, a text adventure you can play right here, and a research project.",
+                lead: "Two production systems I built and run, a research project, and a game you can play in the page.",
                 liveLabel: "Live",
                 codeLabel: "Code",
                 featuredLabel: "Featured",
@@ -149,24 +149,24 @@ export const resources = {
                         image: "/projects/dyr-transportes.png",
                     },
                     {
-                        id: "fallen-kingdom",
-                        name: "The Fallen Kingdom",
-                        tagline:
-                            "A text adventure I wrote in C++ after an OOP course, compiled to WebAssembly and playable right above — the same code still builds as a Windows console app.",
-                        description:
-                            "21 rooms, 24 enemies, and a lamp that burns down with every action you take. The 2021 game logic is untouched; only the console I/O was replaced, because a browser tab cannot block inside std::getline without freezing the page. Emscripten's Asyncify suspends the whole C++ call stack instead, so the original loop still reads a line the way it always did. Around 113 KB gzipped.",
-                        tech: ["C++17", "WebAssembly", "Emscripten", "Asyncify", "React 19"],
-                        code: "https://github.com/Rad710/text-based-game",
-                        featured: true,
-                        playable: true,
-                    },
-                    {
                         id: "sentiment-analysis",
                         name: "Sentiment Analysis on Financial News",
                         tagline:
                             "My final-year thesis: comparing NLP models (finBERT, pyABSA) at reading the tone of financial news, then checking it against how the stock actually moved. The department flagged it as one of the standout projects of the 2023 class.",
                         tech: ["PyTorch", "finBERT", "pyABSA", "pandas", "scikit-learn"],
                         featured: false,
+                    },
+                    {
+                        id: "fallen-kingdom",
+                        name: "The Fallen Kingdom",
+                        tagline:
+                            "A text adventure I wrote in C++ in 2021, compiled to WebAssembly. Play it above.",
+                        description:
+                            "21 rooms, 24 enemies, and a lamp that runs out. Same game logic as the Windows build.",
+                        tech: ["C++17", "WebAssembly", "Emscripten"],
+                        code: "https://github.com/Rad710/text-based-game",
+                        featured: true,
+                        playable: true,
                     },
                 ],
             },
@@ -331,7 +331,7 @@ export const resources = {
             },
             projects: {
                 title: "Proyectos seleccionados",
-                lead: "Dos sistemas en producción que construí y mantengo, una aventura de texto que podés jugar acá mismo, y un proyecto de investigación.",
+                lead: "Dos sistemas en producción que construí y mantengo, un proyecto de investigación, y un juego que podés jugar en la página.",
                 liveLabel: "En vivo",
                 codeLabel: "Código",
                 featuredLabel: "Destacado",
@@ -395,24 +395,24 @@ export const resources = {
                         image: "/projects/dyr-transportes.png",
                     },
                     {
-                        id: "fallen-kingdom",
-                        name: "The Fallen Kingdom",
-                        tagline:
-                            "Una aventura de texto que escribí en C++ después de una materia de POO, compilada a WebAssembly y jugable acá arriba — el mismo código sigue compilando como programa de consola de Windows. El juego está en inglés.",
-                        description:
-                            "21 salas, 24 enemigos y una lámpara que se va gastando con cada acción. La lógica del juego de 2021 quedó intacta; sólo cambió la entrada y salida por consola, porque una pestaña del navegador no puede quedarse bloqueada dentro de std::getline sin congelar la página. En su lugar, Asyncify de Emscripten suspende toda la pila de llamadas de C++, así el bucle original sigue leyendo una línea como siempre lo hizo. Alrededor de 113 KB comprimidos.",
-                        tech: ["C++17", "WebAssembly", "Emscripten", "Asyncify", "React 19"],
-                        code: "https://github.com/Rad710/text-based-game",
-                        featured: true,
-                        playable: true,
-                    },
-                    {
                         id: "sentiment-analysis",
                         name: "Análisis de Sentimiento en Noticias Financieras",
                         tagline:
                             "Mi tesis de fin de carrera: comparar modelos de NLP (finBERT, pyABSA) leyendo el tono de las noticias financieras y cruzándolo con cómo se movió realmente la acción. La facultad lo marcó como uno de los proyectos destacados de la promoción 2023.",
                         tech: ["PyTorch", "finBERT", "pyABSA", "pandas", "scikit-learn"],
                         featured: false,
+                    },
+                    {
+                        id: "fallen-kingdom",
+                        name: "The Fallen Kingdom",
+                        tagline:
+                            "Una aventura de texto que escribí en C++ en 2021, compilada a WebAssembly. Jugala acá arriba (está en inglés).",
+                        description:
+                            "21 salas, 24 enemigos y una lámpara que se apaga. La misma lógica que la versión de Windows.",
+                        tech: ["C++17", "WebAssembly", "Emscripten"],
+                        code: "https://github.com/Rad710/text-based-game",
+                        featured: true,
+                        playable: true,
                     },
                 ],
             },

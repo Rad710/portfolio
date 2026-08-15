@@ -14,7 +14,6 @@ export function Experience() {
     return (
         <Section id="experience" className="border-t border-border">
             <Reveal>
-                <p className="eyebrow mb-3">02 / {t("experience.title")}</p>
                 <h2 className="mb-12 font-display text-3xl text-foreground sm:text-4xl">
                     {t("experience.title")}
                 </h2>

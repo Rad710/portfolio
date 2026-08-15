@@ -106,20 +106,22 @@ design:
     left_margin: 0.55in
     right_margin: 0.55in
   typography:
-    line_spacing: 0.4em
+    line_spacing: 0.469em
     font_size:
       body: 8.5pt
       name: 19pt
+  links:
+    underline: false
   section_titles:
-    space_above: 0.2cm
-    space_below: 0.12cm
+    space_above: 0.25cm
+    space_below: 0.139cm
   sections:
-    space_between_regular_entries: 0.16cm
-    space_between_text_based_entries: 0.08cm
+    space_between_regular_entries: 0.204cm
+    space_between_text_based_entries: 0.099cm
   entries:
     space_between_columns: 0.1cm
     highlights:
-      space_between_items: 0.08cm
+      space_between_items: 0.096cm
 
 locale:
   language: spanish

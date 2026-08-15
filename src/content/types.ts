@@ -18,6 +18,8 @@ export type ProjectItem = {
     tech: string[];
     live?: string;
     code?: string;
+    /** Shown next to the live link so visitors can sign in and look around. */
+    demo?: { user: string; password: string };
     featured: boolean;
     image?: string;
     /** Renders the playable WebAssembly build in place of a screenshot. */

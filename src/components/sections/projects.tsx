@@ -95,6 +95,15 @@ function FeaturedCard({ project }: { project: ProjectItem }) {
                 <p className="mt-4 max-w-2xl leading-relaxed text-muted">{project.description}</p>
             ) : null}
 
+            {project.demo ? (
+                <p className="mt-5 font-mono text-[0.78rem] text-muted">
+                    {t("projects.demoLabel")}{" "}
+                    <span className="select-all text-foreground">{project.demo.user}</span>
+                    <span className="px-1.5 text-faint">/</span>
+                    <span className="select-all text-foreground">{project.demo.password}</span>
+                </p>
+            ) : null}
+
             <TechTags items={project.tech} className="mt-8" />
         </article>
     );

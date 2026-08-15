@@ -49,7 +49,7 @@ function BrowserFrame({ src, url, alt }: { src: string; url?: string; alt: strin
                     <span className="size-2.5 rounded-full bg-border" />
                 </span>
                 {url ? (
-                    <span className="ml-1 truncate font-mono text-[0.65rem] text-faint">
+                    <span className="ml-1 truncate font-mono text-[0.75rem] text-faint">
                         {url.replace(/^https?:\/\//, "")}
                     </span>
                 ) : null}
@@ -63,7 +63,7 @@ function BrowserFrame({ src, url, alt }: { src: string; url?: string; alt: strin
 function FeaturedCard({ project }: { project: ProjectItem }) {
     const { t } = useTranslation();
     return (
-        <article className="rounded-2xl border border-border bg-surface/40 p-6 transition-colors hover:border-accent/40 sm:p-8">
+        <article>
             {project.playable ? (
                 <div className="mb-8">
                     <GameConsole />
@@ -76,7 +76,7 @@ function FeaturedCard({ project }: { project: ProjectItem }) {
 
             <div className="flex flex-wrap items-start justify-between gap-4">
                 <div>
-                    <p className="mb-2 font-mono text-[0.7rem] uppercase tracking-[0.18em] text-faint">
+                    <p className="mb-2 font-mono text-[0.72rem] uppercase tracking-[0.18em] text-faint">
                         {t("projects.featuredLabel")}
                     </p>
                     <h3 className="font-display text-2xl text-foreground sm:text-3xl">
@@ -120,7 +120,6 @@ export function Projects() {
     return (
         <Section id="work" className="border-t border-border">
             <Reveal>
-                <p className="eyebrow mb-3">03 / {t("projects.title")}</p>
                 <h2 className="font-display text-3xl text-foreground sm:text-4xl">
                     {t("projects.title")}
                 </h2>

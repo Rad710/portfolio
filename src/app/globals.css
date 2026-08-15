@@ -12,10 +12,10 @@
   --surface: oklch(0.96 0.008 85);      /* raised cards */
   --foreground: oklch(0.22 0.01 60);    /* near-black ink */
   --muted: oklch(0.52 0.012 65);        /* secondary text */
-  --faint: oklch(0.7 0.01 65);          /* tertiary / hints */
+  --faint: oklch(0.52 0.01 65);       /* tertiary — 4.9:1 on surface, 5.2:1 on paper */
   --border: oklch(0.9 0.008 80);        /* hairlines */
-  --accent: oklch(0.62 0.14 55);        /* amber, darkened for light bg */
-  --accent-strong: oklch(0.55 0.15 50);
+  --accent: oklch(0.54 0.14 55);        /* amber — 5.0:1 as fill and as text on paper */
+  --accent-strong: oklch(0.47 0.15 50);
 }
 
 .dark {
@@ -23,7 +23,7 @@
   --surface: oklch(0.21 0.008 75);
   --foreground: oklch(0.93 0.008 85);   /* warm off-white */
   --muted: oklch(0.7 0.012 80);
-  --faint: oklch(0.5 0.01 75);
+  --faint: oklch(0.62 0.01 75);       /* 4.9:1 on surface, 5.2:1 on the dark ground */
   --border: oklch(0.3 0.008 75);
   --accent: oklch(0.8 0.13 72);         /* warm amber */
   --accent-strong: oklch(0.86 0.13 78);
@@ -39,9 +39,9 @@
   --color-accent: var(--accent);
   --color-accent-strong: var(--accent-strong);
 
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-  --font-display: var(--font-fraunces);
+  --font-sans: var(--font-plex-sans);
+  --font-mono: var(--font-plex-mono);
+  --font-display: var(--font-newsreader);
 }
 
 * {

@@ -181,7 +181,7 @@ export function GameConsole() {
             <div className="flex items-center justify-between gap-2 border-b border-border px-3 py-2">
                 <span className="flex items-center gap-2">
                     <span className="size-2.5 rounded-full bg-accent" aria-hidden />
-                    <span className="font-mono text-[0.65rem] uppercase tracking-[0.14em] text-faint">
+                    <span className="font-mono text-[0.75rem] uppercase tracking-[0.14em] text-faint">
                         {t("projects.game.title")}
                     </span>
                 </span>
@@ -189,7 +189,7 @@ export function GameConsole() {
                     <button
                         type="button"
                         onClick={() => void start()}
-                        className="rounded font-mono text-[0.65rem] uppercase tracking-[0.14em] text-faint transition-colors hover:text-accent"
+                        className="rounded font-mono text-[0.75rem] uppercase tracking-[0.14em] text-faint transition-colors hover:text-accent"
                     >
                         {t("projects.game.restart")}
                     </button>

@@ -79,6 +79,11 @@ export function GameConsole() {
         if (screen) screen.scrollTop = screen.scrollHeight;
     }, [segments]);
 
+    // The first read happens before React re-renders with the input enabled.
+    useEffect(() => {
+        if (awaitingInput) inputRef.current?.focus({ preventScroll: true });
+    }, [awaitingInput]);
+
     const push = useCallback((text: string) => {
         if (!text) return;
         const list = segmentsRef.current;
@@ -253,7 +258,7 @@ export function GameConsole() {
                     ref={inputRef}
                     value={command}
                     onChange={(event) => setCommand(event.target.value)}
-                    disabled={!awaitingInput}
+                    disabled={status !== "running"}
                     placeholder={awaitingInput ? t("projects.game.hint") : ""}
                     autoComplete="off"
                     autoCapitalize="off"

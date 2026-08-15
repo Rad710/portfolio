@@ -76,9 +76,11 @@ function FeaturedCard({ project }: { project: ProjectItem }) {
 
             <div className="flex flex-wrap items-start justify-between gap-4">
                 <div>
-                    <p className="mb-2 font-mono text-[0.72rem] uppercase tracking-[0.18em] text-faint">
-                        {t("projects.featuredLabel")}
-                    </p>
+                    {project.playable ? null : (
+                        <p className="mb-2 font-mono text-[0.72rem] uppercase tracking-[0.18em] text-faint">
+                            {t("projects.featuredLabel")}
+                        </p>
+                    )}
                     <h3 className="font-display text-2xl text-foreground sm:text-3xl">
                         {project.name}
                     </h3>
@@ -114,8 +116,6 @@ function CompactCard({ project }: { project: ProjectItem }) {
 export function Projects() {
     const { t } = useTranslation();
     const items = t("projects.items", { returnObjects: true }) as ProjectItem[];
-    const featured = items.filter((p) => p.featured);
-    const compact = items.filter((p) => !p.featured);
 
     return (
         <Section id="work" className="border-t border-border">
@@ -127,14 +127,9 @@ export function Projects() {
             </Reveal>
 
             <div className="mt-12 flex flex-col gap-6">
-                {featured.map((p, i) => (
+                {items.map((p, i) => (
                     <Reveal key={p.id} delay={i * 0.08}>
-                        <FeaturedCard project={p} />
-                    </Reveal>
-                ))}
-                {compact.map((p) => (
-                    <Reveal key={p.id}>
-                        <CompactCard project={p} />
+                        {p.featured ? <FeaturedCard project={p} /> : <CompactCard project={p} />}
                     </Reveal>
                 ))}
             </div>

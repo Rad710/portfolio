@@ -178,9 +178,9 @@ export const resources = {
                             "FLTK",
                             "OpenAL",
                         ],
-                        // To show a clip instead, drop it at public/projects/theme-park.mp4
-                        // and add `video: "/projects/theme-park.mp4"`; this becomes its poster.
-                        image: "/projects/theme-park.png",
+                        // The poster is a frame from the clip, so the two share a framing.
+                        image: "/projects/theme-park.jpg",
+                        video: "/projects/theme-park.mp4",
                         page: "/theme-park",
                         code: "https://github.com/Rad710/theme-park",
                         featured: true,
@@ -453,7 +453,8 @@ export const resources = {
                             "FLTK",
                             "OpenAL",
                         ],
-                        image: "/projects/theme-park.png",
+                        image: "/projects/theme-park.jpg",
+                        video: "/projects/theme-park.mp4",
                         page: "/theme-park",
                         code: "https://github.com/Rad710/theme-park",
                         featured: true,

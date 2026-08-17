@@ -22,6 +22,10 @@ export type ProjectItem = {
     demo?: { user: string; password: string };
     featured: boolean;
     image?: string;
+    /** Plays in the card's media slot instead of `image`, which becomes its poster. */
+    video?: string;
+    /** Internal route holding a runnable demo, e.g. "/theme-park". */
+    page?: string;
     /** Renders the playable WebAssembly build in place of a screenshot. */
     playable?: boolean;
 };

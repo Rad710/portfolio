@@ -90,6 +90,9 @@ export const resources = {
                 codeLabel: "Code",
                 featuredLabel: "Featured",
                 demoLabel: "Sign in with",
+                demoPageLabel: "Run it",
+                portNote:
+                    "A heads-up: this is a WebAssembly port of a native C++ and OpenGL program written for Windows. The browser has no fixed-function OpenGL, so that half of the graphics pipeline is reimplemented here — expect a low frame rate and some rough edges. The native build runs smoothly.",
                 game: {
                     title: "The Fallen Kingdom",
                     blurb: "A C++ text adventure compiled to WebAssembly. About 330 KB, downloaded only when you press play.",
@@ -158,6 +161,29 @@ export const resources = {
                             "My final-year thesis: comparing NLP models (finBERT, pyABSA) at reading the tone of financial news, then checking it against how the stock actually moved. The department flagged it as one of the standout projects of the 2023 class.",
                         tech: ["PyTorch", "finBERT", "pyABSA", "pandas", "scikit-learn"],
                         featured: false,
+                    },
+                    {
+                        id: "theme-park",
+                        name: "Theme Park",
+                        tagline:
+                            "A rollercoaster on a spline track, a water simulation and hand-written GLSL shaders — my computer-graphics final project, now running in the browser.",
+                        description:
+                            "Written in C++ with OpenGL, FLTK and OpenAL for Windows. I compiled it to WebAssembly without rewriting the renderer: the browser has no fixed-function OpenGL, so the port supplies its own immediate-mode pipeline, matrix stacks, lighting and picking, plus stand-ins for FLTK, GLU/GLUT, OpenCV and ALUT. It runs slower in the browser than the native build.",
+                        tech: [
+                            "C++",
+                            "OpenGL",
+                            "GLSL",
+                            "WebAssembly",
+                            "Emscripten",
+                            "FLTK",
+                            "OpenAL",
+                        ],
+                        // To show a clip instead, drop it at public/projects/theme-park.mp4
+                        // and add `video: "/projects/theme-park.mp4"`; this becomes its poster.
+                        image: "/projects/theme-park.png",
+                        page: "/theme-park",
+                        code: "https://github.com/Rad710/theme-park",
+                        featured: true,
                     },
                     {
                         id: "fallen-kingdom",
@@ -339,6 +365,9 @@ export const resources = {
                 codeLabel: "Código",
                 featuredLabel: "Destacado",
                 demoLabel: "Entrá con",
+                demoPageLabel: "Ejecutarlo",
+                portNote:
+                    "Aviso: esto es un port a WebAssembly de un programa nativo en C++ y OpenGL hecho para Windows. El navegador no tiene el pipeline fijo de OpenGL, así que esa mitad del pipeline gráfico está reimplementada acá — esperá pocos cuadros por segundo y algunos detalles sin pulir. La versión nativa corre fluida.",
                 game: {
                     title: "The Fallen Kingdom",
                     blurb: "Una aventura de texto en C++ compilada a WebAssembly. Unos 330 KB, que se descargan recién cuando le das a jugar.",
@@ -407,6 +436,27 @@ export const resources = {
                             "Mi tesis de fin de carrera: comparar modelos de NLP (finBERT, pyABSA) leyendo el tono de las noticias financieras y cruzándolo con cómo se movió realmente la acción. La facultad lo marcó como uno de los proyectos destacados de la promoción 2023.",
                         tech: ["PyTorch", "finBERT", "pyABSA", "pandas", "scikit-learn"],
                         featured: false,
+                    },
+                    {
+                        id: "theme-park",
+                        name: "Parque de Diversiones",
+                        tagline:
+                            "Una montaña rusa sobre una spline, una simulación de agua y shaders GLSL escritos a mano — mi proyecto final de computación gráfica, ahora corriendo en el navegador.",
+                        description:
+                            "Hecho en C++ con OpenGL, FLTK y OpenAL para Windows. Lo compilé a WebAssembly sin reescribir el renderizador: el navegador no tiene el pipeline fijo de OpenGL, así que el port aporta su propio modo inmediato, pilas de matrices, iluminación y picking, además de reemplazos para FLTK, GLU/GLUT, OpenCV y ALUT. En el navegador corre más lento que la versión nativa.",
+                        tech: [
+                            "C++",
+                            "OpenGL",
+                            "GLSL",
+                            "WebAssembly",
+                            "Emscripten",
+                            "FLTK",
+                            "OpenAL",
+                        ],
+                        image: "/projects/theme-park.png",
+                        page: "/theme-park",
+                        code: "https://github.com/Rad710/theme-park",
+                        featured: true,
                     },
                     {
                         id: "fallen-kingdom",

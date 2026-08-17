@@ -1,6 +1,7 @@
 "use client";
 
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Play } from "lucide-react";
+import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import { GameConsole } from "@/components/ui/game-console";
 import { GitHubIcon } from "@/components/ui/icons";
@@ -22,6 +23,15 @@ function ProjectLinks({ project }: { project: ProjectItem }) {
                     <ExternalLink className="size-3.5" />
                     {t("projects.liveLabel")}
                 </a>
+            ) : null}
+            {project.page ? (
+                <Link
+                    href={project.page}
+                    className="inline-flex items-center gap-1.5 rounded-full bg-accent px-3.5 py-1.5 text-xs font-medium text-background transition-colors hover:bg-accent-strong"
+                >
+                    <Play className="size-3.5" />
+                    {t("projects.demoPageLabel")}
+                </Link>
             ) : null}
             {project.code ? (
                 <a
@@ -60,6 +70,30 @@ function BrowserFrame({ src, url, alt }: { src: string; url?: string; alt: strin
     );
 }
 
+/** Media slot for a card: a looping clip if there is one, otherwise a still. */
+function MediaFrame({ project }: { project: ProjectItem }) {
+    if (project.video) {
+        return (
+            <div className="overflow-hidden rounded-xl border border-border bg-surface">
+                <video
+                    src={project.video}
+                    poster={project.image}
+                    className="block w-full"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    preload="metadata"
+                />
+            </div>
+        );
+    }
+    if (project.image) {
+        return <BrowserFrame src={project.image} url={project.live} alt={project.name} />;
+    }
+    return null;
+}
+
 function FeaturedCard({ project }: { project: ProjectItem }) {
     const { t } = useTranslation();
     return (
@@ -68,9 +102,9 @@ function FeaturedCard({ project }: { project: ProjectItem }) {
                 <div className="mb-8">
                     <GameConsole />
                 </div>
-            ) : project.image ? (
+            ) : project.video || project.image ? (
                 <div className="mb-8">
-                    <BrowserFrame src={project.image} url={project.live} alt={project.name} />
+                    <MediaFrame project={project} />
                 </div>
             ) : null}
 

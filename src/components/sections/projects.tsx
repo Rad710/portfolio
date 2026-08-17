@@ -1,7 +1,6 @@
 "use client";
 
 import { ExternalLink, Play } from "lucide-react";
-import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import { GameConsole } from "@/components/ui/game-console";
 import { GitHubIcon } from "@/components/ui/icons";
@@ -25,13 +24,19 @@ function ProjectLinks({ project }: { project: ProjectItem }) {
                 </a>
             ) : null}
             {project.page ? (
-                <Link
+                // A plain anchor, not next/link: the demo mounts a WebAssembly
+                // runtime and a WebGL context, and a soft navigation would keep
+                // them alive in this document after the visitor navigates back.
+                // A new tab gets its own document and is torn down when closed.
+                <a
                     href={project.page}
+                    target="_blank"
+                    rel="noreferrer"
                     className="inline-flex items-center gap-1.5 rounded-full bg-accent px-3.5 py-1.5 text-xs font-medium text-background transition-colors hover:bg-accent-strong"
                 >
                     <Play className="size-3.5" />
                     {t("projects.demoPageLabel")}
-                </Link>
+                </a>
             ) : null}
             {project.code ? (
                 <a

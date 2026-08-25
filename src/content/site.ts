@@ -27,7 +27,7 @@ export const resources = {
                 lead: "For the past three years I've worked on the software Paraguay's public hospitals use every day. I mostly handle the backend and deployment, but I also led the rewrite of the frontend to React and built an offline version for the hospitals where the connection drops for days at a time.",
                 ctaWork: "See my work",
                 ctaContact: "Get in touch",
-                location: "Asunción, Paraguay · open to remote",
+                location: "Asunción, Paraguay · open to relocation",
             },
             about: {
                 title: "About",
@@ -259,7 +259,7 @@ export const resources = {
                 title: "Languages",
                 items: [
                     { name: "Spanish", level: "Native" },
-                    { name: "English", level: "TOEFL iBT 109/120" },
+                    { name: "English", level: "TOEFL iBT 6/6 · CEFR C2" },
                     { name: "German", level: "B1" },
                     { name: "Mandarin", level: "Elementary" },
                 ],
@@ -533,7 +533,7 @@ export const resources = {
                 title: "Idiomas",
                 items: [
                     { name: "Español", level: "Nativo" },
-                    { name: "Inglés", level: "TOEFL iBT 109/120" },
+                    { name: "Inglés", level: "TOEFL iBT 6/6 · MCER C2" },
                     { name: "Alemán", level: "B1" },
                     { name: "Mandarín", level: "Elemental" },
                 ],

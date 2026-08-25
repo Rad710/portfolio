@@ -2,7 +2,7 @@
 cv:
   name: Rolando Medina Rosner
   headline: Ingeniero de Software Full-stack
-  location: Asunción, Paraguay (abierto a remoto)
+  location: Asunción, Paraguay (abierto a relocación)
   email: rolmedro@gmail.com
   phone: "+595985941268"
   website: https://rad710.com
@@ -93,7 +93,7 @@ cv:
       - label: IA / Datos
         details: PyTorch, scikit-learn, pandas, NumPy, modelos transformer, LLMs autoalojados (vLLM), RAG
       - label: Idiomas
-        details: Español (nativo), Inglés (TOEFL iBT 109/120), Alemán (B1), Mandarín (elemental)
+        details: Español (nativo), Inglés (TOEFL iBT 6/6, MCER C2), Alemán (B1), Mandarín (elemental)
       - label: Certificaciones
         details: NVIDIA DLI Fundamentos de Deep Learning; Machine Learning (Stanford); Statistics 110 (Harvard)
 

@@ -52,6 +52,7 @@ export const metadata: Metadata = {
         "RAG",
         "Paraguay",
         "remote",
+        "relocation",
     ],
     authors: [{ name: "Rolando Medina Rosner", url: "https://rad710.com" }],
     creator: "Rolando Medina Rosner",

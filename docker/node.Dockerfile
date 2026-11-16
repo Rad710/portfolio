@@ -1,9 +1,9 @@
 # Multi-stage build for the Next.js standalone server.
 # Runtime stage mirrors the HIS `internacion` node.Dockerfile convention:
-# node:22.22.1, non-root `nextjs` user, standalone `server.js`, port 3000.
+# node:22, non-root `nextjs` user, standalone `server.js`, port 3000.
 
 # --- builder -------------------------------------------------------------
-FROM node:22.22.1 AS builder
+FROM node:22.23.5 AS builder
 WORKDIR /app
 ENV NEXT_TELEMETRY_DISABLED=1
 RUN corepack enable
@@ -17,7 +17,7 @@ COPY . .
 RUN pnpm build
 
 # --- runner --------------------------------------------------------------
-FROM node:22.22.1 AS runner
+FROM node:22.23.5 AS runner
 LABEL maintainer="Rolando Medina Rosner" \
     description="Portfolio — Next.js standalone server"
 
